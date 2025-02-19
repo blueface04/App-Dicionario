@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*:not(i) {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(184deg, #8754ff, black);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #D2DAFF;
+}
+.cabecera-izquierda, .cabecera-derecha {
+    flex: 1;
+    position: relative;
+}
+.cabecera-izquierda {
+    display: flex;
+    align-items: center;
+}
+.cabecera-derecha {
+    text-align: right;
+}
+.logo {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.logo .icono {
+    font-size: 2.5rem; /* Ajusta el tamaño del icono */
+}
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contenedor {
+    background-color: #D2DAFF;
+    width: 140vmin;
+    max-height: calc(100vh - 100px); 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 58%;
+    left: 50%;
+    padding: 40px 50px; 
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow-y: auto; 
+}
+.caja-busqueda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.caja-busqueda input {
+    padding: 5px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid black;
+    font-size: 16px;
+    background-color: #D2DAFF;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+.caja-busqueda button {
+    padding: 15px 0;
+    width: 15%;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#microfono-btn {
+    padding: 15px 0;
+    width: 10%;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.seccion-izquierda {
+    width: 60%;
+}
+.seccion-derecha {
+    width: 35%;
+}
+.seccion-derecha img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.definicion h3, .seccion-derecha h3, .ejemplo h3 {
+    font-size: 24px;
+    color: black;
+    
+    
+}
+.palabra {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    
+}
+.sinonimos {
+    margin-top: 10px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.significado-palabra, .ejemplo-palabra {
+    color: #000;
+    margin-bottom: 10px ;
+}
+.error {
+    margin-top: 80px;
+    text-align: center;
+}
+.historial {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #D2DAFF;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto; 
+}
+.historial.mostrar {
+    left: 0;
+}
+.historial h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+.historial ul {
+    list-style-type: none;
+    padding-left: 0;
+    color: white;
+}
+.historial ul li {
+    background: black;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.historial ul li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+}
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 1em;
+}
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90vmin;
+        padding: 60px 30px;
+    }
+    .caja-busqueda input {
+        width: 60%;
+    }
+    .caja-busqueda button {
+        width: 20%;
+    }
+    #microfono-btn {
+        width: 15%;
+    }
+    .resultado {
+        flex-direction: column;
+    }
+    .seccion-izquierda, .seccion-derecha {
+        width: 100%;
+    }
+    .seccion-derecha img {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contenedor {
+        width: 120vmin;
+        padding: 50px 40px;
+    }
+    .caja-busqueda input {
+        width: 60%;
+    }
+    .caja-busqueda button {
+        width: 20%;
+    }
+    #microfono-btn {
+        width: 15%;
+    }
+}

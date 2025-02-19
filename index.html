@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Diccionario Web</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 448 512%22><path d=%22M96 0C78.3 0 64 14.3 64 32V480c0 17.7 14.3 32 32 32H416c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H96zm96 128h128v32H192v-32zm0 64h128v32H192v-32zm0 64h128v32H192v-32zM112 48h304v416H112V48zM48 128V64c0-8.8 7.2-16 16-16h16v96H64c-8.8 0-16-7.2-16-16zm0 256v-64c0-8.8 7.2-16 16-16h16v96H64c-8.8 0-16-7.2-16-16zm0-128v-64c0-8.8 7.2-16 16-16h16v96H64c-8.8 0-16-7.2-16-16zm0 256v-64c0-8.8 7.2-16 16-16h16v80c0 8.8-7.2 16-16 16s-16-7.2-16-16zM320 48v32H192V48h128z%22/></svg>" type="image/svg+xml" color="white">
+</head>
+<body>
+    <header>
+        <div class="cabecera-izquierda">
+            <button id="toggle-historial-btn">Historial</button>
+            <div id="contenedor-historial" class="historial">
+                <h2>Historial de Búsqueda</h2>
+                <ul id="lista-historial"></ul>
+                <button id="cerrar-historial-btn">Cerrar</button>
+            </div>
+        </div>
+        <div class="logo">
+            <i class="fas fa-book icono"></i>
+            <h1>Diccionario Web</h1>
+        </div>
+        <div class="cabecera-derecha">
+            <button id="toggle-traducir-btn">Traducir</button>
+        </div>
+    </header>
+    <div class="contenedor">
+        <div class="caja-busqueda">
+            <input type="text" placeholder="Escribe la palabra aquí..." id="entrada-palabra" autocomplete="off" />
+            <button id="buscar-btn">Buscar</button>
+            <button id="microfono-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        <div class="resultado" id="resultado">
+            <div class="seccion-izquierda">
+                <div class="palabra" style="display: none;">
+                    <h3 id="nombre-palabra"></h3>
+                </div>
+                <div class="sinonimos" style="display: none;"><strong>Sinónimos:</strong> <span id="texto-sinonimos"></span></div>
+                <div class="definicion" style="display: none;">
+                    <h3>Definición</h3>
+                    <p class="significado-palabra" id="significado-palabra"></p>
+                </div>
+                <div class="ejemplo" style="display: none;">
+                    <h3>Ejemplo</h3>
+                    <p class="ejemplo-palabra" id="ejemplo-palabra"></p>
+                </div>
+            </div>
+            <div class="seccion-derecha">
+                <img id="imagen-palabra" src="" alt="" />
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
